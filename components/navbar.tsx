@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import NavLink from "./navLink";
+import { motion } from "framer-motion";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -11,6 +12,18 @@ const links = [
 ];
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const topVariants = {
+    closed: { rotate: 45, backgroundColor: "rgb(0,0,0)" },
+    open: { rotate: 0 },
+  };
+  const centerVariants = {
+    closed: { opacity: 1 },
+    open: { opacity: 0 },
+  };
+  const bottomVariants = {
+    closed: { rotate: -45, backgroundColor: "rgb(0,0,0)" },
+    open: { rotate: 0 },
+  };
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* LINKS */}
@@ -77,8 +90,8 @@ const Navbar = () => {
         </Link>
         <Link href="/">
           <Image
-            src="/pininterest.png"
-            alt="pininterest"
+            src="/pinterest.png"
+            alt="pinterest"
             width={24}
             height={24}
           />
@@ -90,9 +103,18 @@ const Navbar = () => {
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setOpen((prev) => !prev)}>
-          <div className="w-10 h-1 bg-black rounded"></div>
-          <div className="w-10 h-1 bg-black rounded"></div>
-          <div className="w-10 h-1 bg-black rounded"></div>
+          <motion.div
+            variants={topVariants}
+            animate={open ? "open" : "closed"}
+            className="w-10 h-1 bg-white rounded origin-left"></motion.div>
+          <motion.div
+            variants={centerVariants}
+            animate={open ? "open" : "closed"}
+            className="w-10 h-1 bg-white rounded"></motion.div>
+          <motion.div
+            variants={bottomVariants}
+            animate={open ? "open" : "closed"}
+            className="w-10 h-1 bg-white rounded origin-left"></motion.div>
         </button>
         {/* MENU LIST */}
         {open && (
