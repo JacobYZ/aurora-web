@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import NavLink from "./navLink";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -13,16 +13,53 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const topVariants = {
-    closed: { rotate: 45, backgroundColor: "rgb(0,0,0)" },
-    open: { rotate: 0 },
+    closed: {
+      rotate: 0,
+    },
+    open: {
+      rotate: 45,
+      backgroundColor: "rgb(0,0,0)",
+    },
   };
   const centerVariants = {
-    closed: { opacity: 1 },
-    open: { opacity: 0 },
+    closed: {
+      opacity: 1,
+    },
+    open: {
+      opacity: 0,
+    },
   };
+
   const bottomVariants = {
-    closed: { rotate: -45, backgroundColor: "rgb(0,0,0)" },
-    open: { rotate: 0 },
+    closed: {
+      rotate: 0,
+    },
+    open: {
+      rotate: -45,
+      backgroundColor: "rgb(0,0,0)",
+    },
+  };
+  const listVariants = {
+    closed: {
+      x: "100vw",
+    },
+    open: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const listItemVariants = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    open: {
+      x: 0,
+      opacity: 1,
+    },
   };
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
@@ -118,16 +155,23 @@ const Navbar = () => {
         </button>
         {/* MENU LIST */}
         {open && (
-          <div className="absolute top-0 left-0 w-screen h-screen bg-white text-black flex flex-col items-center justify-center gap-8 text-4xl">
+          <motion.div
+            variants={listVariants}
+            initial="closed"
+            animate="open"
+            className="absolute top-0 left-0 w-screen h-screen bg-white text-black flex flex-col items-center justify-center gap-8 text-4xl z-40">
             {links.map((link) => (
-              <Link
-                href={link.href}
-                key={link.href}
-                className="">
-                {link.label}
-              </Link>
+              <motion.div
+                variants={listItemVariants}
+                key={link.href}>
+                <Link
+                  href={link.href}
+                  className="">
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

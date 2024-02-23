@@ -31,7 +31,7 @@ const Homepage = () => {
             View Our Work
           </button>
           <button className="p-4 rounded-lg ring-1 ring-white">
-            Contact Me
+            Contact Us
           </button>
         </div>
       </div>
