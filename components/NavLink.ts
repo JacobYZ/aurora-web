@@ -11,7 +11,6 @@ interface NavLinkProps {
 }
 const NavLink: React.FC<NavLinkProps> = ({ link }) => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <Link
       className={`rounded p-1 cursor-pointer ${

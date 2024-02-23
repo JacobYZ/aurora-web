@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import NavLink from "./navLink";
+import NavLink from "./NavLink";
 import { motion, stagger } from "framer-motion";
 const links = [
   { href: "/", label: "Home" },
