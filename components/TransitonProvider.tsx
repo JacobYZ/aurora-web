@@ -12,9 +12,9 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className="w-screen h-screen bg-gradient-to-b from-stone-800 to-stone-500 text-white">
+        className="w-screen h-screen bg-gradient-to-b from-black to-stone-800 text-white">
         <motion.div
-          className="h-screen w-screen fixed bg-white rouned-b-[100px] z-40"
+          className="h-screen w-screen fixed bg-stone-300 rouned-b-[100px] z-40"
           animate={{ height: "0vh" }}
           exit={{ height: "140vh" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -28,7 +28,7 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
           {sectionTitle === "" ? "AURORA WEB" : sectionTitle}
         </motion.div>
         <motion.div
-          className="h-screen w-screen fixed bg-white rouned-t-[100px] bottom-0 z-40"
+          className="h-screen w-screen fixed bg-stone-300 rouned-t-[100px] bottom-0 z-40"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />

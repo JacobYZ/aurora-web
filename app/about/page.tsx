@@ -1,13 +1,18 @@
 "use client";
 import Brain from "@/components/Brain";
-import { motion, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
 const AboutPage = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
-  console.log(scrollYProgress);
+  const skillRef = useRef(null);
+  // const isSkillRefInView = useInView(skillRef, {once:true});
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const experienceRef = useRef(null);
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
   return (
     <motion.div
       className="h-full"
@@ -83,12 +88,23 @@ const AboutPage = () => {
                 strokeWidth="1"></path>
             </motion.svg>
           </div>
-          {/* SKILL CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          {/* SKILLS CONTAINER */}
+          <div
+            className="flex flex-col gap-12 justify-center"
+            ref={skillRef}>
             {/* SKILL TITLE */}
-            <h1 className="text-2xl font-bold">SKILLS</h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : { x: "-300px" }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold">
+              SKILLS
+            </motion.h1>
             {/* SKILL LIST */}
-            <div className="flex gap-4 flex-wrap">
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : { x: "-300px" }}
+              className="flex gap-4 flex-wrap">
               <div className="rounded p-2 text-sm cursor-pointer bg-white text-black hover:bg-black hover:text-white">
                 HTML
               </div>
@@ -221,7 +237,7 @@ const AboutPage = () => {
               <div className="rounded p-2 text-sm cursor-pointer bg-white text-black hover:bg-black hover:text-white">
                 Linode
               </div>
-            </div>
+            </motion.div>
             {/* SKILL SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
@@ -247,11 +263,21 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* EXPERIENCE CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
+          <div
+            className="flex flex-col gap-12 justify-center pb-48"
+            ref={experienceRef}>
             {/* EXPERIENCE TITLE */}
-            <h1 className="text-2xl font-bold">EXPERIENCE</h1>
+            <motion.h1
+              className="text-2xl font-bold"
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: 0 } : { x: "-300px" }}
+              transition={{ delay: 0.2 }}>
+              EXPERIENCE
+            </motion.h1>
             {/* EXPERIENCE LIST */}
-            <div>
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: 0 } : { x: "-300px" }}>
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
                 {/* LEFT */}
@@ -275,7 +301,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/* CENTER */}
-                <div className="w-1/6 flex justify-center bg-black">
+                <div className="w-1/6 flex justify-center">
                   {/* LINE */}
                   <div className="w-1 h-full bg-gray-300 rouned relative">
                     {/* CIRCLE */}
@@ -285,7 +311,73 @@ const AboutPage = () => {
                 {/* RIGHT */}
                 <div className="w-1/3"></div>
               </div>
-            </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3"></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-300 rouned relative">
+                    {/* CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-black -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-black p-3 font-semibold rounded-b-lg rounded-e-lg">
+                    Academic Tutor
+                  </div>
+                  {/* JOB DESCRIPTION */}
+                  <div className="p-3 text-sm italic">
+                    Tutoring in web development and abstract data types, also
+                    marking assignments for students.
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    Feb 2022 - Present
+                  </div>
+                  {/* COMPANY */}
+                  <div className="p-1 rounded bg-black text-sm font-semibold w-fit">
+                    University of Tasmania
+                  </div>
+                </div>
+              </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-black p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Academic Tutor
+                  </div>
+                  {/* JOB DESCRIPTION */}
+                  <div className="p-3 text-sm italic">
+                    Tutoring in web development and abstract data types, also
+                    marking assignments for students.
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    Feb 2022 - Present
+                  </div>
+                  {/* COMPANY */}
+                  <div className="p-1 rounded bg-black text-sm font-semibold w-fit">
+                    University of Tasmania
+                  </div>
+                </div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-300 rouned relative">
+                    {/* CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-black -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3"></div>
+              </div>
+            </motion.div>
           </div>
         </div>
         {/* SVG CONTAINER */}
