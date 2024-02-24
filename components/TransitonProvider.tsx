@@ -20,7 +20,7 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
         <motion.div
-          className="fixed m-auto top-0 bottom-0 left-0 right-0 w-fit h-fit text-8xl cursor-default text-black font-bold z-30"
+          className="fixed m-auto top-0 bottom-0 left-0 right-0 w-fit h-fit text-8xl cursor-default text-black font-bold z-30 text-center"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
@@ -35,8 +35,7 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
         <div className="h-24">
           <Navbar />
         </div>
-        <div className="h-[calc(100vh - 6rem)]"></div>
-        {children}
+        <div className="h-[calc(100vh-6rem)]">{children}</div>
       </div>
     </AnimatePresence>
   );
