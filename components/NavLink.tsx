@@ -13,7 +13,7 @@ const NavLink: React.FC<NavLinkProps> = ({ link }) => {
   const pathName = usePathname();
   return (
     <Link
-      className={`rounded p-1 cursor-pointer ${
+      className={`rounded p-[0.375rem] cursor-pointer ${
         pathName === link.href && "bg-white text-black"
       }`}
       href={link.href}>

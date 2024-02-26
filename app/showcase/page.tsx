@@ -64,7 +64,7 @@ const ShowcasePage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex-col gap-16 text-center flex items-center justify-center bg-gradient-to-b from-black to-stone-800 ">
+      <div className="w-screen h-screen flex-col gap-16 text-center flex items-center justify-center bg-gradient-to-b from-black to-stone-800">
         <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg

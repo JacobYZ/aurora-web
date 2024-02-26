@@ -19,7 +19,7 @@ const socialMediaLinks = [
 ];
 const Navbar = () => {
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <div className="relative h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl z-50">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
