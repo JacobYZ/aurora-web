@@ -43,7 +43,7 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/Yu.png"
               alt=""
               width={112}
               height={112}
@@ -53,20 +53,23 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I am a web developer with a passion for creating digital
-              experiences. I specialize in front-end development and have a
-              strong understanding of back-end technologies. My goal is to
-              leverage my skills to build innovative and user-friendly
-              applications that make a positive impact on the world.
+              I am a results-driven IT professional with a diverse background
+              spanning software development, project management, and academia.
+              My experience includes full-stack development, ERP system
+              implementation, and collaborative work with international
+              engineering teams. With a strong foundation in programming and a
+              master&apos;s degree focused on machine learning, I am passionate
+              about continuous learning and applying innovative solutions to
+              real-world challenges.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              The only way to do great work is to love what you do.
+              &quot;The only way to do great work is to love what you do.&quot;
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
-            <div className="self-end">
+            {/* <div className="self-end">
               <SignatureSVG />
-            </div>
+            </div> */}
             <ScrollSVG />
           </div>
           {/* SKILLS CONTAINER */}
