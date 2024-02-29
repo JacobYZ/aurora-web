@@ -1,6 +1,5 @@
 "use client";
 import Brain from "@/components/Brain";
-import SignatureSVG from "@/components/SignatureSVG";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useMemo, useRef } from "react";
