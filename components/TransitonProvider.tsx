@@ -3,22 +3,22 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 interface TransitonProviderProps {
   children: React.ReactNode;
 }
 const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
   const pathName = usePathname();
   const sectionTitle = pathName.substring(1).toUpperCase();
-  const [isMounted, setIsMounted] = useState(true);
+  
+  // const [isMounted, setIsMounted] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsMounted(false);
-    }, 800); // duration of the animation
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsMounted(false);
+  //   }, 800); // duration of the animation
 
-    return () => clearTimeout(timer); // clean up on unmount
-  }, []);
+  //   return () => clearTimeout(timer); // clean up on unmount
+  // }, []);
   return (
     <AnimatePresence mode="wait">
       <div
@@ -36,7 +36,6 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
           exit={{ height: "140vh" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
-        {isMounted && (
           <motion.div
             className="fixed m-auto top-0 bottom-0 left-0 right-0 w-fit h-fit text-8xl cursor-default text-black font-bold z-30 text-center"
             initial={{ opacity: 1 }}
@@ -45,7 +44,6 @@ const TransitonProvider: React.FC<TransitonProviderProps> = ({ children }) => {
             transition={{ duration: 0.8, ease: "easeOut" }}>
             {sectionTitle === "" ? "AURORA WEB" : sectionTitle}
           </motion.div>
-        )}
         <motion.div
           className="h-screen w-screen fixed bg-stone-300 rouned-t-[100px] bottom-0 z-10"
           initial={{ height: "140vh" }}
