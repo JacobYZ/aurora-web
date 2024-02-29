@@ -97,7 +97,7 @@ export const EXPERIENCES = [
   {
     jobTitle: "Automation Engineer",
     jobDescription:
-      "Restructuring the company’s business processes into an ERP system and training staff to use the system to improve the overall efficiency of the business.",
+      "Worked with Samsung engineers to deploy the LCD production line control program with Java as the front-end UI and MySQL as the database.",
     jobDate: "Aug 2013 - Aug 2014",
     company: "Nanjing CEC-PANDA LCD Technology Co.",
     position: "left",

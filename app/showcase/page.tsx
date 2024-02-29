@@ -34,7 +34,7 @@ const ShowcasePage = () => {
             <Link
               href={item.link}
               className="flex justify-end">
-              <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-black text-stone-300 font-semibold m-4 rounded">
+              <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-black text-stone-200 font-semibold m-4 rounded">
                 See Demo
               </button>
             </Link>

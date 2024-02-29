@@ -87,7 +87,7 @@ const ContactPage = () => {
             name="user_email"
           />
           <span className="">Regards,</span>
-          <button className="bg-stone-300 text-black rounded p-4 font-semibold">
+          <button className="bg-stone-200 text-black rounded p-4 font-semibold">
             Send
           </button>
           {success && (
