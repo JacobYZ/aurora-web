@@ -6,8 +6,9 @@ import TransitonProvider from "@/components/TransitonProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aurora Web",
-  description: "Crafting Digital Experiences, Designing Tomorrow.",
+  title: "Your Business Deserves a Stunning Website",
+  description:
+    "Aurora Web delivers custom-crafted websites tailored to your brand and goals. Attract new customers and boost your online presence.",
 };
 
 export default function RootLayout({

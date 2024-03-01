@@ -3,26 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import ResponsiveMenu from "./ResponsiveMenu";
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/showcase", label: "Showcase" },
-  { href: "/contact", label: "Contact" },
-];
-const socialMediaLinks = [
-  { href: "/", src: "/github.png", alt: "github" },
-  { href: "/", src: "/linkedin.png", alt: "linkedin" },
-  { href: "/", src: "/twitter.png", alt: "twitter" },
-  { href: "/", src: "/facebook.png", alt: "facebook" },
-  { href: "/", src: "/instagram.png", alt: "instagram" },
-  { href: "/", src: "/pinterest.png", alt: "pinterest" },
-];
+import { NAV_LINKS, SOCIAL_MEDIA_LINKS } from "@/app/constants";
+
 const Navbar = () => {
   return (
     <div className="relative h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
-        {links.map((link) => (
+        {NAV_LINKS.map((link) => (
           <NavLink
             link={link}
             key={link.href}
@@ -42,7 +30,7 @@ const Navbar = () => {
       </div>
       {/* SOCIAL MEDIA */}
       <div className="hidden md:flex gap-4 w-1/3">
-        {socialMediaLinks.map((link) => (
+        {SOCIAL_MEDIA_LINKS.map((link) => (
           <Link
             href={link.href}
             key={link.src}>
@@ -55,7 +43,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <ResponsiveMenu links={links} />
+      <ResponsiveMenu links={NAV_LINKS} />
     </div>
   );
 };

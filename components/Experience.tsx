@@ -10,7 +10,7 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ experience }) => (
   <div className="flex justify-between h-56">
-    <div className="w-1/3">
+    <div className="w-5/12 md:w-2/5 xl:w-1/3">
       {experience.position === "left" && (
         <>
           <div className="bg-black p-3 font-semibold rounded-b-lg rounded-s-lg">
@@ -26,12 +26,12 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => (
         </>
       )}
     </div>
-    <div className="w-1/6 flex justify-center">
+    <div className="w-1/12 flex justify-center">
       <div className="w-1 h-full bg-gray-300 rouned relative">
         <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-black -left-2"></div>
       </div>
     </div>
-    <div className="w-1/3">
+    <div className="w-5/12 md:w-2/5 xl:w-1/3">
       {experience.position === "right" && (
         <>
           <div className="bg-black p-3 font-semibold rounded-b-lg rounded-e-lg">
