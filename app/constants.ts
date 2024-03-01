@@ -97,7 +97,7 @@ export const EXPERIENCES = [
   {
     jobTitle: "Automation Engineer",
     jobDescription:
-      "Worked with Samsung engineers to deploy the LCD production line control program with Java as the front-end UI and MySQL as the database.",
+      "Worked with Samsung engineers to deploy the LCD production line control program with Java and MySQL.",
     jobDate: "Aug 2013 - Aug 2014",
     company: "Nanjing CEC-PANDA LCD Technology Co.",
     position: "left",
@@ -105,7 +105,7 @@ export const EXPERIENCES = [
   {
     jobTitle: "Information Technology Specialist",
     jobDescription:
-      "Produced product manuals and database with Photoshop and Il- lustrator, and modified the ERP system to improve the information approval process.",
+      "Produced product manuals and database with Photoshop and Illustrator, and modified the ERP system to improve the information approval process.",
     jobDate: "Feb 2013 - Aug 2013",
     company: "Beijing Tiandeqin Automobile Parts Co.",
     position: "right",
