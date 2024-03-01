@@ -10,7 +10,7 @@ To install and run the project locally, follow these steps:
 
 ```bash
 git clone https://github.com/JacobYZ/aurora-web.git
-cd repository
+cd aurora-web
 ```
 
 2. Install the dependencies.
@@ -45,7 +45,7 @@ Remember to replace `your_service_id`, `your_template_id`, and `your_public_key`
 
 To use this project as a template for your own portfolio, you can customize the following files:
 
-- `public/images`: Replace the images with your own photos or logos.
+- `public/`: Replace the images with your own photos or logos.
 - `app/constants`: Update the data with your own information, such as name, bio, skills, projects, etc.
 - `app/`: Modify the pages with your own content and layout, etc.
 
