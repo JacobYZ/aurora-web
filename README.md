@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aurora Web
 
-## Getting Started
+[Aurora Web](https://www.auroraweb.com.au/) is my portfolio website that showcases the skills and projects of a web developer (me!). It is built with React, Next.js, Framer Motion, and Tailwind CSS. It features a responsive design, smooth animations, and a functional contact form.
 
-First, run the development server:
+## Installation
+
+To install and run the project locally, follow these steps:
+
+1. Clone the repository and navigate into the directory.
+
+```bash
+git clone https://github.com/JacobYZ/aurora-web.git
+cd repository
+```
+
+2. Install the dependencies.
+
+```bash
+npm install
+```
+
+3. Copy the `.env.example` file and rename it to `.env`.
+
+```bash
+cp .env.example .env
+```
+
+4. Open the `.env` file and replace the placeholders with your actual values.
+
+```shell
+NEXT_PUBLIC_SERVICE_ID=your_service_id
+NEXT_PUBLIC_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_PUBLIC_KEY=your_public_key
+```
+
+5. Start the development server.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Remember to replace `your_service_id`, `your_template_id`, and `your_public_key` with your actual EmailJS service ID, template ID, and public key, respectively.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To use this project as a template for your own portfolio, you can customize the following files:
 
-## Learn More
+- `public/images`: Replace the images with your own photos or logos.
+- `app/constants`: Update the data with your own information, such as name, bio, skills, projects, etc.
+- `app/`: Modify the pages with your own content and layout, etc.
 
-To learn more about Next.js, take a look at the following resources:
+To view the website, open http://localhost:3000 in your browser. You can navigate between the home, about, portfolio, and contact pages using the menu. You can also send a message using the contact form, which will be delivered to your email address using EmailJS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions are welcome. If you want to suggest a feature or report a bug, please open an issue. If you want to make a pull request, please follow these steps:
 
-## Deploy on Vercel
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make your changes.
+4. Push your branch: `git push origin feature-name`.
+5. Create a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
