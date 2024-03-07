@@ -11,7 +11,7 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}>
       <div className="h-full flex flex-col justify-center lg:flex-row md:gap-4 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
-        {/* IMAGE CONTAINER */} {/* Need to add lg:flex-row to its parenet */}
+        {/* IMAGE CONTAINER */} 
         <div className="h-1/2 lg:h-full lg:w-1/2 relative ">
           <Image
             src="/hero.svg"
@@ -24,12 +24,15 @@ const Homepage = () => {
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-2 md:gap-8 items-center justify-center">
           {/* TITLE */}
           <h1 className="text-4xl md:text-6xl font-bold">
-            Your Business Deserves a Stunning Website
+            Your Local Launceston Web Design Partner
           </h1>
           {/* DESCRIPTION */}
           <p className="md:text-xl">
-            Aurora Web delivers custom-crafted websites tailored to your brand
-            and goals. Attract new customers and boost your online presence.
+            Proudly serving Launceston and the surrounding Tasmanian
+            communities, Aurora Web understands the unique needs of local
+            businesses. We&apos;re passionate about helping Launceston
+            businesses thrive online. Contact us for a free consultation and see
+            how we can elevate your brand.
           </p>
           {/* BUTTONS */}
           <div className="flex gap-4 w-full">

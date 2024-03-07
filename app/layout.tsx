@@ -6,9 +6,9 @@ import TransitonProvider from "@/components/TransitonProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Business Deserves a Stunning Website",
+  title: "Launceston Web Design Experts | Aurora Web",
   description:
-    "Aurora Web delivers custom-crafted websites tailored to your brand and goals. Attract new customers and boost your online presence.",
+    "Elevate your Launceston business with stunning web design by Aurora Web. Custom websites that attract customers and boost your online presence.",
 };
 
 export default function RootLayout({
