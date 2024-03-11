@@ -4,14 +4,14 @@ interface ExperienceProps {
     jobDescription: string;
     jobDate: string;
     company: string;
-    position: string;
   };
+  index: number;
 }
 
-const Experience: React.FC<ExperienceProps> = ({ experience }) => (
+const Experience: React.FC<ExperienceProps> = ({ experience, index }) => (
   <div className="flex justify-between h-56">
     <div className="w-5/12 md:w-2/5 xl:w-1/3">
-      {experience.position === "left" && (
+      {index % 2 === 0 && (
         <>
           <div className="bg-black p-3 font-semibold rounded-b-lg rounded-s-lg">
             {experience.jobTitle}
@@ -32,7 +32,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => (
       </div>
     </div>
     <div className="w-5/12 md:w-2/5 xl:w-1/3">
-      {experience.position === "right" && (
+      {index % 2 !== 0 && (
         <>
           <div className="bg-black p-3 font-semibold rounded-b-lg rounded-e-lg">
             {experience.jobTitle}

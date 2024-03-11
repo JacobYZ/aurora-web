@@ -68,12 +68,11 @@ export const SKILLS = [
 ];
 export const EXPERIENCES = [
   {
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "Lead Full-Stack Developer",
     jobDescription:
-      "Developing web applications and APIs, also designing user interfaces and experiences.",
+      "Led the development of web applications and APIs, focusing on architecting scalable solutions and crafting exceptional user experiences.",
     jobDate: "Jan 2023 - Present",
     company: "Aurora Web",
-    position: "left",
   },
   {
     jobTitle: "Frontend Developer",
@@ -81,7 +80,6 @@ export const EXPERIENCES = [
       'Prototyping and developing the mobile application "WaterCan Profit" with Figma and Flutter.',
     jobDate: "Jul 2022 - Present",
     company: "University of Tasmania",
-    position: "right",
   },
   {
     jobTitle: "Web Development & Data Structures Tutor",
@@ -89,7 +87,6 @@ export const EXPERIENCES = [
       "Sole tutor for web development and data structures at UTAS, Launceston. Supporting students with coursework, assignments, and project development.",
     jobDate: "Feb 2022 - Present",
     company: "University of Tasmania",
-    position: "left",
   },
   {
     jobTitle: "Full-Stack Developer",
@@ -97,7 +94,6 @@ export const EXPERIENCES = [
       "Developed an e-commerce platform for selling online courses and educational products, featuring integrated video streaming for online learning.",
     jobDate: "Jul 2018 - Feb 2020",
     company: "Beijing Young Naturalist Education Technology Co.",
-    position: "right",
   },
   {
     jobTitle: "Project Manager",
@@ -105,7 +101,6 @@ export const EXPERIENCES = [
       "Restructuring the company’s business processes into an ERP system and training staff to use the system to improve the overall efficiency of the business.",
     jobDate: "Aug 2016 - May 2018",
     company: "Hangzhou Ciyuanxing Trading Co.",
-    position: "left",
   },
   {
     jobTitle: "Project Manager",
@@ -113,7 +108,6 @@ export const EXPERIENCES = [
       "Led the Hangzhou branch in customizing and selling ERP systems to SMEs, achieving a net profit margin of over 50% in two years.",
     jobDate: "Aug 2014 - Aug 2016",
     company: "Beijing Zhongweikang Pharmaceutical Investment Co.",
-    position: "right",
   },
   {
     jobTitle: "Automation Engineer",
@@ -121,7 +115,6 @@ export const EXPERIENCES = [
       "Worked with Samsung engineers to deploy the LCD production line control program with Java and MySQL.",
     jobDate: "Aug 2013 - Aug 2014",
     company: "Nanjing CEC-PANDA LCD Technology Co.",
-    position: "left",
   },
   {
     jobTitle: "Information Technology Specialist",
@@ -129,7 +122,6 @@ export const EXPERIENCES = [
       "Produced product manuals and database with Photoshop and Illustrator, and modified the ERP system to improve the information approval process.",
     jobDate: "Feb 2013 - Aug 2013",
     company: "Beijing Tiandeqin Automobile Parts Co.",
-    position: "right",
   },
   {
     jobTitle: "Implementation Engineer",
@@ -137,7 +129,6 @@ export const EXPERIENCES = [
       "Participated in the implementation of a wastewater treatment plant project, commissioned and maintained the IT infrastructure within the company.",
     jobDate: "Aug 2011 - Feb 2013",
     company: "Beijing Fubang Zhida Automation Technology Co.",
-    position: "left",
   },
   {
     jobTitle: "Full-Stack Developer",
@@ -145,7 +136,6 @@ export const EXPERIENCES = [
       "Managed full-stack development of the university’s BBS website, focusing on user engagement and site security.",
     jobDate: "Oct 2009 - Jun 2011",
     company: "Southeast University",
-    position: "right",
   },
 ];
 export const PROJECTS = [

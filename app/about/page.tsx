@@ -22,6 +22,7 @@ const AboutPage = () => {
         <Experience
           key={index}
           experience={experience}
+          index={index}
         />
       )),
     []
